@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+	<title>Life in Hindsight - MiniLD #39</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<!--- <meta name="viewport" content="initial-scale=1, maximum-scale=1"> --->
+	<!--- http://www.google.com/webfonts --->
+	<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+	<link href='css/watchandhat.css' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	
+
+<div id="viewport" class="viewport-3x4">
+
+
+	<section class="stats resizeWithViewport">
+		<ul>
+			<li>
+				Date: 		<span class="technology"></span><span class="date"></span>
+				
+			</li>
+			<li>Age: <span class="age"></span></li>
+			<li>Happiness:  <span class="happiness"></span><span class="smiley">?</span></li>
+			<li>Wisdom: <span class="wisdom"></span></li>
+			<li>Health: <span class="health"></span></li>
+			<li>Wealth: <span class="wealth"></span></li>
+			<li>Social: <span class="social"></span></li>
+			<li>Family: <span class="family"></span></li>
+			<li>Creativity: <span class="creativity"></span></li>
+			<li>School: <span class="school"></span></li>
+			<li>Education: <span class="education"></span></li>
+			<li>Job: <span class="job"></span></li>
+			<li>Career: <span class="career"></span></li>
+			<li>Addicted to: <span class="drug"></span></li>
+			<li>Addiction: <span class="addiction"></span></li>
+			<li>Lifestyle: <span class="lifestyle"></span></li>
+			<li>Hobby: <span class="hobby"></span></li>
+			<li>Transportation: <span class="transportation"></span></li>	
+		</ul>
+	</section>
+
+	
+	<!--- <div class="display"></div> --->
+	
+	<section class="char resizeWithViewport"></section>
+	
+	<section class="gameMenu resizeWithViewport">
+		<ul>
+			<li><a class="openModal" href="#system" class="menuLink">System</a></li>
+			<li><a class="pausePlayLink" href="#pause">Pause</a></li>
+			<li><a class="openModal" href="#lifeMenu" class="menuLink">Life</a></li>
+		</ul>
+	</section>
+	
+	<section class="timeline resizeWithViewport">
+		<ol>
+		</ol>
+	</section>
+	
+	<section class="modal">
+		<div>
+			<div class="lifeMenu">
+				<h1>Life</h1>
+				<button type="button" class="choice" data-decision-index="0">Go to School</button>
+				<button type="button" class="choice" data-decision-index="1">Get a new Job</button>
+				<button type="button" class="choice" data-decision-index="2">Change Lifestyle</button>
+				<button type="button" class="choice" data-decision-index="3">Change Hobby</button>
+				<button type="button" class="choice" data-decision-index="4">Change Transportation</button>
+				<button type="button" class="choice" data-decision-index="5">Quit an Addiction</button>
+			</div>
+			<div class="system">
+				<h1>System Menu</h1>
+				<a class="openModal" href="#help">Help</a>
+				<a class="openModal" href="#credits">Info &amp; Credits</a>
+			</div>
+			<div class="help">
+				<h1>Help</h1>
+				<p>
+					Life goes by quickly. Try to survive until time travel is invented, and you
+					will have the chance to go back and give guidance to your past self.
+				</p>
+			</div>
+			<div class="welcome">
+				<h1>Welcome</h1>
+				<p>
+					Life goes by quickly. Try to survive until time travel is invented, and you
+					will have the chance to go back and give guidance to your past self.
+				</p>
+				<p>
+					Press 'X' to close this window, then un-pause the game to 
+					let life begin by pressing 'Play'.
+				</p>
+			</div>			
+			<div class="credits">
+				<h1>Credits</h1>
+				<p>
+					Developed by Luke Nickerson for Ludum Dare, mini-LD #39.
+				</p>
+			</div>
+			<div class="decision">
+				{decision}
+			</div>
+			<div class="lifeEvent">
+				{life event}
+			</div>
+			<button type="button" class="close">X</button>
+		</div>
+	</section>
+
+</div>
+
+<!---
+As logic stands you couldn't meet a man
+Who's from the future
+But logic broke as he appeared he spoke
+About the Future
+"We're not gonna make it" He explained how
+The end will come, you and me were never meant
+To be part of the future,
+All we have is now,
+All we've ever had was now
+All we have is now
+All we'll ever have is now
+
+I noticed that he had a watch and hat
+That looked familiar
+He was me, from a dimension torn free
+Of the future
+"We're not gonna make it" He explained how
+The end will come, you and me were never meant
+To be part of the future,
+All we have is now,
+All we've ever had was now
+All we have is now
+All we'll ever have is now
+
+All we have is now
+
+--->
+
+
+<script src="js/viewport-0.1.js"></script>
+<script src="js/drg_minild39_core.js"></script>
+
+</body>
+</html>

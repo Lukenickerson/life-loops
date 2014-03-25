@@ -1,0 +1,423 @@
+body {
+	background: #313333;
+	margin: 0;
+	padding: 0;
+	font-family: 'VT323', Arial;
+	font-size: 140%;
+}
+#viewport {
+	position: relative;
+	background-color: black; /*#313333;*/
+	box-shadow: 0 0 60px black;
+}
+.viewport-4x3 {
+	width: 480px;
+	height: 320px;
+	min-width: 480px;
+	min-height: 320px;
+	max-width: 960px; 
+	max-height: 640px;
+	margin: 0 auto;
+}
+.viewport-3x4 {
+	width: 320px;
+	height: 480px;
+	min-width: 320px;
+	min-height: 480px;
+	max-width: 640px; 
+	max-height: 960px;
+	margin: 0 auto;
+}		
+
+
+
+
+/* ==================== STATS TOP ============== */
+
+
+section.stats { 
+	position: absolute;			z-index: 5;
+	background: rgba(0,0,0,0.1);
+	width: 100%;
+	height: 30%;
+	color: white;
+	/*border-bottom: solid 1px #333;*/
+}
+section.stats > ul {
+	display: block;
+	margin: 0;
+	padding: 1em 5%;
+	list-style: none;
+	overflow: auto;
+}
+section.stats > ul > li {
+	display: block;
+	float: left;
+	clear: left;
+	width: 68%;
+	/*border: solid 1px white;*/
+}
+section.stats > ul > li.total {
+	float: right;
+	width: 30%;
+}
+
+section.stats span.label {
+	width: 5em;
+	text-shadow: 1px 1px 3px black;
+}
+section.stats span.emergency,
+.emergency {
+	color: red;
+}
+
+
+section.stats > ul > li > ol {
+	display: inline-block;
+	list-style: none;
+	width: 8em; height: 1.1em;
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	
+}
+section.stats > ul > li > ol > li {
+	display: block;
+	float: left;
+	width: 1em; 
+	height: 1em;
+	padding: 0.05em; margin: 0.05em 0.1em;
+	background-color: rgba(50,50,50,1.0);
+	opacity: 0.3;
+	border-radius: 0.2em;
+	text-align: center;
+	font-size: 80%;
+}
+
+section.stats > ul > li > ol > li.one {
+	color: #fff;
+	text-shadow: 1px 1px 2px black;
+	opacity: 1.0;
+}
+
+li.health {
+	color: #33ff66;
+}
+li.health .one {
+	background-color: #33ff66;
+}
+li.wealth {
+	color: #ffff66;
+}
+li.wealth .one {
+	background-color: #ffff66;
+}
+li.social {
+	color: #9966ff;
+}
+li.social .one {
+	background-color: #9966ff;
+}
+li.total {
+	padding: 0.5em 0;
+	background-color: rgba(255,255,255,0.2);
+	text-align: center;
+	text-shadow: 1px 1px 3px black;
+	border-radius: 1em;
+}
+li.total span.label {
+	font-size: 80%;
+}
+li.total span.value {
+	display: block;
+	font-size: 120%;
+}
+
+
+
+/* ======================= Menu & Timetravel buttons ========== */
+
+section.timetravelMenu {
+	position: absolute;			z-index: 30;
+	bottom: 2%; right: 5%;
+	width: 50%; height: 10%;
+	color: white;
+	text-align: right;
+}
+section.timetravelMenu a.button {
+	margin: 0;
+}
+/*
+section.timetravelMenu a {
+	display: inline-block;
+	padding: 0.5em;
+	
+	border: solid 4px white;
+	border-radius: 1em;
+	background-color: #003399;
+	color: inherit;
+	text-decoration: none;
+
+}
+
+section.timetravelMenu a:hover {
+	background-color: #003366;
+}
+*/
+
+/* ======================== Time ====================== */
+
+section.time {
+	position: absolute;			z-index: 20;
+	bottom: 2%; left: 5%;
+	color: white;
+	text-shadow: 1px 1px 3px black;
+}	
+
+
+
+
+
+/* ======================== Timeline and Board ====================== */
+
+section.timeline {
+	width: 100%;
+	height: 100%;
+	position: absolute; 				z-index: 10;
+	bottom: 0;
+	/*background: rgba(0,0,0,0.2);*/
+	border-top: solid 4px white;
+	overflow: hidden;
+	white-space: nowrap;
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: all-scroll;
+}
+
+section.timeline.moving
+,section.timeline.moving > ol {
+	
+	/*background-color: rgba(255,200,200,0.2);*/
+}
+
+section.timeline > ol > li:hover > div {
+	display: block;
+}
+
+section.timeline div.board {
+	position: absolute;
+	top: 0px; left: 0px;
+	width: 500px;
+	height: 500px;
+	/*
+	border: dotted 1px #666;
+	background-color: rgba(0,0,0,0.9);
+	*/
+
+}
+div.bi { /* board item */
+	position: absolute;
+	width: 3em; height: 1em; 
+	padding: 1em 0;
+	border: solid 4px white;
+	border-radius: 2em;
+	cursor: pointer;
+	background-color: rgba(255,255,255,0.2);
+	text-align: center;
+	color: white;
+	/*opacity: 0.5;*/
+}
+div.bi:hover {
+	box-shadow: 0 0 2em white;
+}
+div.bi_health {
+	border-color: #33ff66;
+	background-color: rgba(51,255,102,0.5);
+}
+div.bi_wealth {
+	border-color: #ffff66;
+	background-color: rgba(255,255,102,0.5);
+}
+div.bi_social {
+	border-color: #9966ff;
+	background-color: rgba(153,102,255,0.5);
+}
+div.bi.alternateFuture {
+	opacity: 0.2;
+	cursor: inherit;
+}
+div.bi.past {
+	/*background-color: rgba(255,255,255,0.2);*/
+}
+div.bi.bad {
+	border-color: red;
+}
+
+/*
+div.char {
+	display: block;
+	position: absolute;
+	padding: 0.2em;
+	height: 3em;
+	background-color: #663333;
+	color: black;
+	border-radius: 2em 2em 1em 1em;
+	text-align: center;
+	box-shadow: 1px 5px 20px rgba(0,0,0,0.5);
+}
+*/
+div.char {
+	display: block;
+	position: absolute;
+	width: 100px;
+	height: 150px;
+}
+div.char > img {
+	width: 100%;
+	height: 100%;
+}
+
+div.statBalloon {
+	position: absolute;	z-index: 55;
+	display: block;
+	width: 3em;
+	padding: 0.5em 0.5em;
+	border: solid 2px black;
+	background-color: rgba(255,255,255,0.2);
+	text-align: center;
+	box-shadow: 2px 1em 2em black;
+	text-shadow: 1px 1px 3px black;
+	border-radius: 1em;
+	color: white;	
+
+}
+div.statBalloon.bad {
+	background-color: rgba(255,0,0,0.4);
+}
+
+
+
+
+/* ======================== Modals ====================== */
+
+
+section.modal {
+	position: absolute;			z-index: 60;
+	/*display: none;*/
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.85);			
+}
+section.modal > div {
+	position: relative;
+	padding: 1em 1em 2em 1em;
+	min-height: 40%;
+	max-height: 70%;
+	margin: 10% 5%;
+	border: solid 6px white;
+	border-radius: 10px;
+	overflow: auto;
+	background-color: #000066;
+	color: white; 
+	text-shadow: 1px 1px 0 black;
+	box-shadow: 0 2px 10px black;
+	font-size: 120%;
+}
+section.modal > div  a {
+	color: white;
+}
+section.modal > div > div {
+	/*display: none;*/
+}
+section.modal > div > button.close {
+	/*position: absolute;*/
+	float: right;
+	bottom: 0;
+	right: 0;
+	min-height: 2em; min-width: 2em;
+	font-size: 140%;
+	max-width: 10%; max-height: 10%;
+	border: solid 4px white;
+	color: white;
+	background-color: black;
+	cursor: pointer;
+}
+.easyClose {
+	cursor: pointer;
+}
+
+section.modal p, section.modal h1 {
+	margin-top: 0;
+}
+
+a.menuLink {
+	position: absolute;
+	right: 0;
+}
+
+button.choice
+,a.button {
+	display: inline-block;
+	margin: 0.5em 0;
+	padding: 0.5em 1em;
+	border: solid 4px white;
+	border-radius: 30px;
+	background-color: #000088;
+	color: white;
+	box-shadow: 0 4px 1em rgba(0,0,0,0.75);
+	text-shadow: 1px 1px 0 black;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	text-decoration: none;
+}
+button.choice:hover
+,a.button:hover {
+	background-color: #003366;
+	text-shadow: 1px 1px 10px black;
+}
+button.choice.notPossible {
+	opacity: 0.5;
+}
+
+div.menu a.button {
+	display: block;
+}
+
+/* ==== special things ==== */
+
+section.splash {
+	position: absolute; z-index: 100;
+	top: 0; left: 0;
+	height: 100%; width: 100%;
+	background-color: black;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+	color: #eee;
+}
+section.splash img.logo {
+	display: block;
+	width: 100%; 
+	max-width: 400px;
+	max-height: 400px;
+	margin: 1em auto;
+}
+section.splash img.deathray {
+	position: absolute;
+	top: 0.5em; right: 0.5em;
+}
+section.splash button {
+	margin: 1em auto 0 auto;
+}
+	
+.difficultyName {
+	color: #ffff88;
+}
+

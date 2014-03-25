@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+<head>
+	<title>Life Loops - MiniLD #39</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<!--- http://www.google.com/webfonts --->
+	<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
+	<link href='css/trichoice.css' rel='stylesheet' type='text/css'>
+	
+</head>
+<body>
+	
+
+<div id="viewport" class="viewport-3x4">
+
+
+	
+	
+	<section class="stats resizeWithViewport">
+		<ul>
+			<li class="total">
+				<span class="label">Total Fortune</span>
+				<span class="value">100</span>
+			</li>		
+			<li class="health">
+				<span class="label">Health</span>
+				<span class="value"></span>
+				<ol>
+					<li class="one">1</li>
+					<li class="one">2</li>
+					<li class="one">3</li>
+					<li class="one">4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+				</ol>				
+			</li>
+			<li class="wealth">
+				<span class="label">Wealth</span>
+				<span class="value"></span>
+				<ol>
+					<li class="one">1</li>
+					<li class="one">2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+				</ol>				
+			</li>
+			<li class="social">
+				<span class="label">Social</span>
+				<span class="value"></span>
+				<ol>
+					<li class="one">1</li>
+					<li class="one">2</li>
+					<li class="one">3</li>
+					<li class="one">4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+				</ol>				
+			</li>
+
+		</ul>
+	</section>
+	
+	<section class="timeline resizeWithViewport">
+		<div class="connectors">
+		</div>
+		<div class="board">
+			<div class="bi now" style="top: 300px; left: 100px;">2013</div>
+			<div class="char">
+				<!--- (o_o) --->
+				<img src="images/timeman_big.png">
+			</div>
+		</div>
+	</section>	
+
+	<section class="time resizeWithViewport">
+		
+		<span class="year">1900</span>
+		<span class="age">Age 21</span>
+		<div class="timetech" style="font-size: 80%; margin-top: 0.2em">
+			Time travel tech<span class="no-timetravel">: <meter value="0" min="0" max="100"></meter></span>
+			<span class="timetravel">exists!</span>
+		</div>
+	</section>
+	
+	
+	<section class="timetravelMenu resizeWithViewport">
+		<a class="openModal button" href="#menu">Menu</a>
+	</section>
+	
+	
+	<section class="modal">
+		<div>
+			<div class="timetravelHelp easyClose">
+				<h1>Time Travel</h1>
+				<p>
+					<span class="timetravel">Time travel has been invented!</span>
+					<span class="no-timetravel">Time travel has not yet been invented. When it has you can...</span>
+				</p>
+				<p>
+					Navigate the timeline backwards by dragging the screen to the right,
+					then select a year to travel back to.
+				</p>
+				<p>
+					Once you travel back and interfere with the timeline, you will promptly vanish and leave
+					only your past-self - now wiser.
+				</p>
+			</div>
+			<div class="menu">
+				<h1>Menu</h1>
+				<a class="openModal button" href="#help">Introduction Help</a>
+				<a class="openModal button" href="#timetravelHelp">Time Travel</a>
+				<a class="openModal button" href="#credits">About / Credits</a>
+				<a class="toggleSound button" href="#sound">Sound On/Off</a>
+				<a class="openModal button" href="#difficulty">Difficulty</a>
+			</div>
+			<div class="help easyClose">
+				<h1>Help</h1>
+				<p>
+					Life can be random and unfair. With the power
+					of <strong>hindsight</strong>, you learn which path in life is best.
+				</p>
+				<p>
+					Try to survive until time travel is invented, and you
+					will have the chance to go back and give guidance to your past self.
+				</p>
+			</div>
+			<div class="welcome easyClose">
+				<h1>Welcome</h1>
+				<p>
+					Life can be random and unfair. With the power
+					of <strong>hindsight</strong>, you learn which path in life is best.
+				</p>
+				<p>
+					Each turn you must select from one of three paths as time moves on.
+					If you can survive until time travel is invented, you
+					will have the chance to go back and give guidance to your past-self.
+				</p>
+				<p>
+					Press 'X' to close this window, then click on the circles to make
+					life decisions.
+				</p>
+			</div>			
+			<div class="credits">
+				<h1>Credits</h1>
+				<p>
+					Developed by Luke Nickerson for Ludum Dare, mini-LD #39 ("hindsight" theme). 
+				</p>
+				<p>
+					Assets: all artwork and styling are original, 
+					sounds from <a target="_blank" href="http://www.freesound.org/">freesound.org</a>,
+					font VT323 from Google Web Fonts.
+				</p>
+				<ul>
+					<li><a target="_blank" href="http://deathraygames.com/">DeathRayGames.com</a></li>
+					<li><a target="_blank" href="http://deathraygames.tumblr.com/">on Tumblr</a></li>
+					<li><a target="_blank" href="http://twitter.com/deathraygames/">on Twitter</a></li>
+				</ul>
+			</div>
+			<div class="death">
+				<h1>You've Died!</h1>
+				<p>
+					Nothing in your life was going well, and your choices have left you dead.
+					Perhaps you will have better luck next time.
+				</p>
+				<p>
+					Tip: Try playing again on Easy and make sure to time travel as soon as you can.
+				</p>
+				<button type="button" class="choice startOver">Start Over</button>
+			</div>
+			<div class="win">
+				<h1>High Score!</h1>
+				<p>
+					You've gotten the best fate possible. Congratulations!
+				</p>
+				<p>
+					Try playing again on a harder difficulty.
+				</p>
+				<button type="button" class="choice startOver">Start Over</button>
+			</div>
+			<div class="oldAge easyClose">
+				<h1>Old Age</h1>
+				<p>Once you are past age 100, your health will decrease every turn.</p>
+			</div>
+			<div class="past easyClose">
+				<h1>The Past</h1>
+				You cannot choose a year in the past yet. Perhaps someday time travel will be invented. 
+				The technology seems to be about 
+				<span class="techYearsLeft">?</span> years away...
+			</div>
+			<div class="invention easyClose">	
+				<h1>Time Travel Invented</h1>
+				<p>
+					Good News: The flux capacitor has been invented and Time Travel
+					is now possible!
+				</p>
+				<p>
+					Navigate the timeline backwards by dragging the screen to the right,
+					then select a year to travel back in time.
+				</p>
+			</div>
+			<div class="backInTime easyClose">
+				<h1>Back to the Past</h1>
+				<p>
+					You travel back in time from the future to give advise to your past-self. 
+					Once you've interferred with your own timeline, you promptly vanish.
+				</p>
+			</div>
+			<div class="difficulty">
+				<h1>Change Difficulty (<span class="difficultyName"></span>)</h1>
+				<button class="choice changeDifficulty easyDiff" type="button">Easy</button><br />
+				<button class="choice changeDifficulty normalDiff" type="button">Normal</button><br />
+				<button class="choice changeDifficulty hardDiff" type="button">Hard</button>	
+			</div>			
+			<div class="lifeEvent easyClose">
+				{life event}
+			</div>
+			<button type="button" class="close">X</button>
+		</div>
+	</section>
+	
+	<section class="splash resizeWithViewport">
+		<img class="logo" src="images/life-loops-logo.png" />
+		<div>Play:</div>
+		<button class="choice changeDifficulty easyDiff" type="button">Easy</button>
+		<button class="choice changeDifficulty normalDiff" type="button">Normal</button>
+		<button class="choice changeDifficulty hardDiff" type="button">Hard</button>
+		<img class="deathray" src="images/deathray_icon_64x64.png" />
+		
+	</section>
+
+</div>
+
+<!---
+As logic stands you couldn't meet a man
+Who's from the future
+But logic broke as he appeared he spoke
+About the Future
+"We're not gonna make it" He explained how
+The end will come, you and me were never meant
+To be part of the future,
+All we have is now,
+All we've ever had was now
+All we have is now
+All we'll ever have is now
+
+I noticed that he had a watch and hat
+That looked familiar
+He was me, from a dimension torn free
+Of the future
+"We're not gonna make it" He explained how
+The end will come, you and me were never meant
+To be part of the future,
+All we have is now,
+All we've ever had was now
+All we have is now
+All we'll ever have is now
+
+All we have is now
+
+--->
+
+
+<script src="js/viewport-0.1.js"></script>
+<script src="js/drg_minild39_core2.js"></script>
+
+</body>
+</html>
